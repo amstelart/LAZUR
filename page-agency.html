@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>LAZUR</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="container">
+          <div class="page-header__inner">
+            <div class="logo">
+              <a href="index.html" class="logo__link">
+                <img class="logo-img" src="img/logo.svg" alt="LAZUR">
+                <img class="logo-white-img" src="img/logo-white.svg" alt="LAZUR">
+              </a>
+              <div class="logo__caption">
+                Диджитал агентство полного цикла.
+                Веб-сайты. Реклама и продвижение. Поддержка.
+              </div>
+            </div>
+  
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="page-agency.html" class="main-nav__link">
+                    Агенство
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-services.html" class="main-nav__link">
+                    Услуги
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-portfolio.html" class="main-nav__link">
+                    Портфолио
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-calc.html" class="main-nav__link">
+                    Калькулятор
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-contacts.html" class="main-nav__link">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main" style="overflow: hidden;">
+
+        <div class="page-top">
+          <div class="container">
+            <div class="page-top__inner">
+              <div class="page-top__content">
+                <div class="page-top__title">Агенство</div>
+                <p class="page-top__text">За 5 лет мы поняли: добиться успеха на рынке можно только при системном подходе. </p>
+                <p class="page-top__text">Глубокое понимание всех этапов развития в интернете помогает нам добиваться максимальных результатов и приводить на ваш сайт не просто пользователей, а клиентов.</p>
+              </div>
+              <div class="page-top__img-wrap">
+                <img src="img/page-top-agency.jpg" alt="" class="page-top__img">
+              </div>
+            </div>
+            <a href="#" class="d-btn">
+              <div class="d-btn__inner">
+                <div class="d-btn__outer-text">Рассчитать стоимость проекта</div>
+                <div class="d-btn__body">
+                  <span class="d-btn__icon">
+                    <span></span>
+                  </span>
+                  <span class="d-btn__caption">Рассчитать стоимость проекта</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <section class="advantage">
+          <div class="container">
+            <div class="advantage__header">
+              <h2 class="advantage__title">Наши преимущества и принципы</h2>
+            </div>
+            <ul class="advantage__list">
+              <li class="advantage__item">
+                <a href="#" class="advantage-card">
+                  <div class="advantage-card__header">
+                    Высокое <br>качество
+                  </div>
+                  <div class="advantage-card__body">
+                    <p>Наши клиенты получают наивысшее качество. Чистый код и ведение сайта без навыков программирования</p>
+                  </div>
+                </a>
+              </li>
+              <li class="advantage__item">
+                <a href="#" class="advantage-card">
+                  <div class="advantage-card__header">
+                    Уникальный <br> дизайн
+                  </div>
+                  <div class="advantage-card__body">
+                    <p>Наши клиенты получают наивысшее качество. Чистый код и ведение сайта без навыков программирования</p>
+                  </div>
+                </a>
+              </li>
+              <li class="advantage__item">
+                <a href="#" class="advantage-card">
+                  <div class="advantage-card__header">
+                    Работаем по <br> методике SCRUM
+                  </div>
+                  <div class="advantage-card__body">
+                    <p>Наши клиенты получают наивысшее качество. Чистый код и ведение сайта без навыков программирования</p>
+                  </div>
+                </a>
+              </li>
+              <li class="advantage__item">
+                <a href="#" class="advantage-card">
+                  <div class="advantage-card__header">
+                    Повышаем <br> экспертизу
+                  </div>
+                  <div class="advantage-card__body">
+                    <p>Наши клиенты получают наивысшее качество. Чистый код и ведение сайта без навыков программирования</p>
+                  </div>
+                </a>
+              </li>
+              <li class="advantage__item">
+                <a href="#" class="advantage-card">
+                  <div class="advantage-card__header">
+                    Анализируем, <br> а не предполагаем
+                  </div>
+                  <div class="advantage-card__body">
+                    <p>Наши клиенты получают наивысшее качество. Чистый код и ведение сайта без навыков программирования</p>
+                  </div>
+                </a>
+              </li>
+              <li class="advantage__item">
+                <a href="#" class="advantage-card">
+                  <div class="advantage-card__header">
+                    Юридические <br> отношения
+                  </div>
+                  <div class="advantage-card__body">
+                    <p>Наши клиенты получают наивысшее качество. Чистый код и ведение сайта без навыков программирования</p>
+                  </div>
+                </a>
+              </li>
+              <li class="advantage__item">
+                <a href="#" class="advantage-card">
+                  <div class="advantage-card__header">
+                    Оптимизированный <br> продукт
+                  </div>
+                  <div class="advantage-card__body">
+                    <p>Наши клиенты получают наивысшее качество. Чистый код и ведение сайта без навыков программирования</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- certificates -->
+        <section class="certificates">
+          <div class="container">
+            <div class="certificates__header">
+              <h2 class="certificates__title">Наши сертификаты</h2>
+            </div>
+            <!-- certificates list -->
+            <div class="certificates__list">
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+              <div class="certificates__item">
+                <img src="img/sert-01.jpg" alt="" class="certificates-img">
+              </div>
+            </div>
+            <!-- ./certificates list -->
+            <div class="certificates__caption">
+              <p>Наши специалисты обладают всеми необходимыми знаниями,<br> чтобы помогать развиваться вашему проекту.</p>
+              <a href="#" class="d-btn d-btn--yellow d-btn--wt">
+                <div class="d-btn__inner">
+                  <div class="d-btn__outer-text">Обсудить мой проект</div>
+                  <div class="d-btn__body">
+                    <span class="d-btn__icon">
+                      <span></span>
+                    </span>
+                    <span class="d-btn__caption">Обсудить мой проект</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- ./certificates -->
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__inner">
+            <div class="logo page-footer__logo">
+              <a href="index.html" class="logo__link"><img src="img/logo-white.svg" alt="LAZUR"></a>
+              <div class="logo__caption">
+                Диджитал агентство полного цикла.<br>
+                Веб-сайты. Реклама и продвижение. Поддержка.
+              </div>
+            </div>
+            <div class="page-footer__nav">
+              <ul class="footer-nav">
+                <li><a href="#">Агенство</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__contacts">
+              <ul class="contacts-list">
+                <li><a href="tel:+78005553535">+7 (800) 555-3535</a></li>
+                <li><a href="mailto:info@lazur.media">info@lazur.media</a></li>
+                <li><a href="#">Тверь</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__social">
+              <div class="social">
+                <div class="social__title">Социальные сети</div>
+                <div class="social__list">
+                  <div class="social__link-wrap">
+                    <a href="#" class="social__link">
+                      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-facebook"></use></svg>
+                    </a>
+                  </div>
+                  <div class="social__link-wrap">
+                    <a href="#" class="social__link">
+                      <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-vk"></use></svg>
+                    </a>
+                  </div>
+                  <div class="social__link-wrap">
+                    <a href="#" class="social__link">
+                      <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-telega"></use></svg>
+                    </a>
+                  </div>
+                  <div class="social__link-wrap">
+                    <a href="#" class="social__link">
+                      <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-whatsapp"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="page-footer__copyright">Copyright © 2019 Lazur media</p>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
