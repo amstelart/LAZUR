@@ -1,0 +1,95 @@
+// В этом файле должны быть стили для БЭМ-блока d-btn, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.d-btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  text-decoration: none;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__outer-text {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 30px;
+    white-space: nowrap;
+  }
+  
+  &__body {
+    color: #fff;
+    background-color: $color-main;
+    padding: 30px 30px 30px 100px;
+    position: relative;
+    display: inline-block;
+    min-width: 252px;
+  }
+
+  &__icon {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    border: 1px solid #fff;
+    background-color: $color-main;
+    border-radius: 50%;
+    box-shadow: -5px 0px 0px 0px #6BA5BE, -5px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    transition: all $transition-time;
+
+    &:before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      position: absolute;
+      top: 26px;
+      left: 13px;
+      transform: translateY(-70%) rotate(-45deg);
+    }
+  }
+
+  &__caption {
+    display: none;
+  }
+
+  &:hover {
+    #{$block-name}__icon {
+      left: 45px;
+      box-shadow: -9px 0px 0px 0px #6BA5BE, -19px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    }
+  }
+
+  &--wt {
+    #{$block-name}__outer-text {
+      color: #fff;
+    }
+  }
+
+  &--yellow {
+    #{$block-name}__body {
+      background-color: $color-yellow;
+    }
+
+    #{$block-name}__icon {
+      background-color: $color-yellow;
+      border-color: #67757F;
+      box-shadow: -5px 0px 0px 0px #FFCB0F, -5px 0px 0px 0px rgba(#FFCB0F, 0.5), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+      &:before {
+        border-color: #67757F;
+      }
+    }
+
+    &:hover {
+      #{$block-name}__icon {
+        box-shadow: -9px 0px 0px 0px #FFCB0F, -19px 0px 0px 0px rgba(#FFCB0F, 0.5), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}

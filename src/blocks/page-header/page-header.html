@@ -1,0 +1,55 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+
+<header class="page-header" role="banner">
+  <div class="container">
+    <div class="page-header__inner">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
+          <img class="logo-img" src="img/logo.svg" alt="LAZUR">
+          <img class="logo-white-img" src="img/logo-white.svg" alt="LAZUR">
+        </a>
+        <div class="logo__caption">
+          Диджитал агентство полного цикла.
+          Веб-сайты. Реклама и продвижение. Поддержка.
+        </div>
+      </div>
+  
+      <nav id="main-nav" class="main-nav" role="navigation">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="page-agency.html" class="main-nav__link">
+              Агенство
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="page-services.html" class="main-nav__link">
+              Услуги
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="page-portfolio.html" class="main-nav__link">
+              Портфолио
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="page-calc.html" class="main-nav__link">
+              Калькулятор
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="page-contacts.html" class="main-nav__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+      </nav>
+    </div>
+  </div>
+</header>

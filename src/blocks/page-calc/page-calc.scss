@@ -1,0 +1,87 @@
+// В этом файле должны быть стили для БЭМ-блока page-calc, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-calc {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include row;
+  }
+
+  &__caption {
+    @include col();
+    @include col(xl, 6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      font-size: 24px;
+      line-height: 1.3;
+      font-weight: 600;
+      margin-bottom: 60px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      li,
+      a {
+        font-size: 24px;
+        font-weight: 700;
+        color: $color-main;
+        transition: all $transition-time;
+
+        &:hover {
+          text-decoration: none;
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__form-wrap {
+    @include col();
+    @include col(xl, 6);
+    position: relative;
+    background: $color-main;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      background: $color-main;
+    }
+  }
+
+  &__form {
+    position: relative;
+    z-index: 1;
+    margin: 40px;
+    color: #fff;
+    background: $color-main;
+    max-width: 492px;
+    padding-bottom: 120px;
+
+    .field-actions {
+      position: absolute;
+      left: calc(100% + 35px);
+      bottom: -51px;
+    }
+  }
+}

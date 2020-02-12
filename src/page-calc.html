@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>LAZUR</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main" style="overflow: hidden;">
+
+        <div class="page-calc">
+          <div class="container">
+            <div class="page-calc__inner">
+              <div class="page-calc__caption">
+                <h1 class="page-calc__title">Проектный <br>калькулятор</h1>
+                <p>Вы можете рассчитать примерный <br>бюджет интересующей услуги</p>
+              </div>
+              <div class="page-calc__form-wrap">
+                <form class="page-calc__form" action="">
+                  <h3>Оставьте заявку и мы свяжемся с вами</h3>
+                  <label class="field-text">
+                    <span class="field-text__name">Меня зовут</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Моя компания</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Мой вопрос</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Телефон</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                    </span>
+                  </label>
+                  <div class="field-actions">
+                    <a href="#" class="d-btn d-btn--yellow d-btn--wt">
+                      <div class="d-btn__inner">
+                        <div class="d-btn__outer-text">Отправить</div>
+                        <div class="d-btn__body">
+                          <span class="d-btn__icon">
+                            <span></span>
+                          </span>
+                          <span class="d-btn__caption">Отправить</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="calc-steps-wrap">
+            <div class="container">
+              <div class="calc-steps">
+                <div class="steps-item">
+                  <div class="steps-item__title">Услуги</div>
+                </div>
+                <div class="steps-item">
+                  <div class="steps-item__title">Выбор платформы</div>
+                </div>
+                <div class="steps-item">
+                  <div class="steps-item__title">Выбор дизайна</div>
+                </div>
+                <div class="steps-item">
+                  <div class="steps-item__title">Наполнение сайта товарами</div>
+                </div>
+                <div class="steps-item">
+                  <div class="steps-item__title">Добавление отдельных функций</div>
+                </div>
+                <div class="steps-item">
+                  <div class="steps-item__title">Продвижение проекта</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
