@@ -8,10 +8,20 @@
 
   background-color: $color-blue-darken;
   color: #fff;
-  padding: 75px 0;
+  padding-top: 35px;
+  padding-bottom: 20px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
 
   .container {
     position: relative;
+
+    @media (min-width: $screen-md) {
+      padding-right: 45px;
+    }
   }
 
   &__inner {
@@ -34,8 +44,12 @@
     @include col(lg, 2);
   }
 
-  &__logo,
-  &__nav,
+  &__logo {
+    @include col(md, 5);
+  }
+  &__nav {
+    @include col(md, 3);
+  }
   &__contacts {
     @include col(md, 4);
   }
@@ -109,7 +123,6 @@
 
       &:hover {
         color: $color-yellow;
-        text-decoration: none;
       }
     }
   }

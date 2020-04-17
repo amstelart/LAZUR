@@ -1,0 +1,145 @@
+// В этом файле должны быть стили для БЭМ-блока services, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.services {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: -1px;
+
+  &__title {
+    margin-top: 0;
+
+    @media (min-width: $screen-lg) {
+      max-width: 60%;
+      padding-bottom: 90px;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: serv-counter;
+    padding-bottom: 555px;
+    @include row;
+
+    @media (max-width: $screen-md) {
+      padding-bottom: 40px;
+      background-image: none;
+    }
+    
+    @media (max-width: $screen-lg) {
+      background-image: url(../img/mountain-sm.png);
+      background-repeat: no-repeat;
+      background-position: bottom -40px center;
+      background-size: 100%;
+    }
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 6);
+    @include col(lg, 3);
+    margin-bottom: 30px;
+    position: relative;
+
+    @media (max-width: ($screen-lg - 1)) {
+      min-height: 200px;
+      padding-top: 80px;
+      padding-left: 35px;
+
+      &:before {
+        counter-increment: serv-counter;
+        content: "0" counter(serv-counter);
+        position: absolute;
+        left: 15px;
+        top: 0;
+        height: 220px;
+        font-size: 180px;
+        line-height: 1;
+        color: rgba( #67757F, 0.06);
+        font-weight: 700;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      &:after {
+        content: "";
+        opacity: 0;
+        position: absolute;
+        top: calc(100% + 30px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 860px;
+        height: 555px;
+        background-image: url(../img/mountain.png);
+        background-size: 860px 555px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.active,
+    &:hover {
+      color: $color-main;
+      cursor: pointer;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 24px;
+    }
+  }
+
+  &__card-group {
+    @include row;
+  }
+
+  &__card {
+    @include col();
+    @include col(xl, 3);
+    margin-bottom: 30px;
+  }
+
+  &__card-inner {
+    display: block;
+    background-color: $color-main;
+    color: #fff;
+    height: 100%;
+    padding: 40px;
+    text-decoration: none;
+    transition: all $transition-time;
+
+    &:hover {
+      background-color: $color-yellow;
+      color: #67757F;
+    }
+  }
+
+  &__card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  &__card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+  }
+}

@@ -18,49 +18,86 @@
     font-weight: 700;
     padding: 30px;
     white-space: nowrap;
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline-flex;
+    }
   }
   
   &__body {
     color: #fff;
     background-color: $color-main;
-    padding: 30px 30px 30px 100px;
+    padding: 20px 70px 20px 20px;
     position: relative;
     display: inline-block;
-    min-width: 252px;
+    
+    @media (min-width: $screen-lg) {
+      padding: 30px 30px 30px 100px;
+      width: 252px;
+    }
   }
 
   &__icon {
-    width: 49px;
-    height: 49px;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    top: 16px;
-    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
     border: 1px solid #fff;
     background-color: $color-main;
     border-radius: 50%;
     box-shadow: -5px 0px 0px 0px #6BA5BE, -5px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     transition: all $transition-time;
 
+    @media (min-width: $screen-lg) {
+      width: 49px;
+      height: 49px;
+      right: inherit;
+      left: 30px;
+    }
+
     &:before {
       content: "";
-      width: 14px;
-      height: 14px;
+      width: 8px;
+      height: 8px;
       border-right: 1px solid #fff;
       border-bottom: 1px solid #fff;
       position: absolute;
-      top: 26px;
-      left: 13px;
+      top: 16px;
+      left: 8px;
       transform: translateY(-70%) rotate(-45deg);
+
+      @media (min-width: $screen-lg) {
+        width: 14px;
+        height: 14px;
+        top: 26px;
+        left: 13px;
+      }
     }
   }
 
   &__caption {
-    display: none;
+    display: inline-block;
+    color: #67757F;
+    font-size: 14px;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
 
   &:hover {
     #{$block-name}__icon {
-      left: 45px;
+
+      right: 15px;
+
+      @media (min-width: $screen-lg) {
+        right: inherit;
+        left: 45px;
+      }
+
       box-shadow: -9px 0px 0px 0px #6BA5BE, -19px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     }
   }

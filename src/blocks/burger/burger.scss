@@ -2,7 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$toggler-part-height:         3px !default;
+$toggler-part-height:         4px;
 $toggler-part-bg-color:       #67757F;
 
 .burger {
@@ -14,10 +14,14 @@ $toggler-part-bg-color:       #67757F;
   display: flex;
   align-items: center;
   width: 30px;
-  height: 30px;
+  height: 18px;
   user-select: none;
   cursor: pointer;
   outline: none;
+
+  svg {
+    fill: #67757F;
+  }
 
   > span {
     display: inline-block;
@@ -26,6 +30,7 @@ $toggler-part-bg-color:       #67757F;
     background: $toggler-part-bg-color;
     position: relative;
     transition: background $transition-time $transition-time;
+    border-radius: 7px;
 
     &:before,
     &:after {
@@ -37,14 +42,15 @@ $toggler-part-bg-color:       #67757F;
       background: $toggler-part-bg-color;
       transform-origin: 50% 50%;
       transition: top $transition-time $transition-time, transform $transition-time;
+      border-radius: 7px;
     }
 
     &:before {
-      top: -10px;
+      top: -7px;
     }
 
     &:after {
-      top: 10px;
+      top: 7px;
     }
   }
 

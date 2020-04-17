@@ -10,11 +10,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 45px 0;
+  padding: 20px 0;
+  
+  @media (min-width: $screen-lg) {
+    padding: 45px 0;
+  }
 
   &__inner {
     display: flex;
-    flex-wrap: wrap;
 
     .logo {
       margin-right: auto;
@@ -40,6 +43,13 @@
     z-index: 10;
     padding: 5px 0 !important;
     animation: slideInDown 0.5s 1 ease-in-out;
+
+    .burger {
+      align-self: center;
+      svg {
+        fill: #fff;
+      }
+    }
 
     .logo__link {
       margin-top: 10px;

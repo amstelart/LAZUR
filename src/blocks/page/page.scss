@@ -40,6 +40,13 @@
 
       background-image: url('../img/man.jpg');
       background-repeat: no-repeat;
+      background-position: right -45vw top 3vw;
+      background-size: 100vw;
+
+      @media (min-width: $screen-md) {
+        background-position: right -45vw top 3vw;
+        background-size: 100vw;
+      }
     
       @media (min-width: $screen-xl) {
         background-position: right -40vw top -7vw;
@@ -76,7 +83,11 @@ body {
   background-color: #fff;
   margin: 0;
   min-height: 100%;
-  padding-top: 178px;
+  padding-top: 123px;
+  
+  @media (min-width: $screen-lg) {
+    padding-top: 178px;
+  }
 }
 
 [tabindex='-1']:focus {
@@ -127,16 +138,31 @@ img {
 // intro
 .intro {
 
-  padding-top: 160px;
-  padding-bottom: 320px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 160px;
+    padding-bottom: 320px;
+  }
 
   &__title {
     font-weight: 700;
     font-size: 52px;
     line-height: 1.1;
-    margin-bottom: 195px;
-
+    margin-bottom: 45px;
+    
+    @media (min-width: $screen-md) {
+      margin-bottom: 115px;
+    }
+    
     @media (min-width: $screen-lg) {
+      margin-bottom: 195px;
       font-size: 90px;
     }
   }
@@ -145,11 +171,20 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    position: relative;
 
     .d-btn {
       position: absolute;
-      left: 75%;
+      right: 0;
+
+      @media (max-width: $screen-md) {
+        position: static;
+        min-width: 100%;
+        
+        .d-btn__body {
+          right: -15px;
+          width: 100%;
+        }
+      }
     }
 
     .stats {
@@ -167,23 +202,41 @@ img {
   &__item {
 
     padding: 20px 0;
+    max-width: 145px;
 
     &:not(:last-child) {
-      margin-right: 102px;
+      margin-right: 30px;
+
+      @media (min-width: $screen-md) {
+        margin-right: 50px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-right: 80px;
+      }
     }
   }
 
   &__count {
     color: $color-main;
-    font-size: 46px;
+    font-size: 34px;
     font-weight: 700;
     margin-bottom: 15px;
+    white-space: nowrap;
+
+    @media (min-width: $screen-lg) {
+      font-size: 46px;
+    }
   }
 
   &__caption {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 1.4;
     color: $text-color;
+
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+    }
   }
 }
 // ./stats
@@ -191,9 +244,16 @@ img {
 // about
 .about {
 
-  padding-bottom: 160px;
+  padding-bottom: 60px;
+  
+  @media (min-width: $screen-md) {
+    padding-bottom: 160px;
+  }
 
   &__title {
+
+    margin-top: 0;
+
     @media (min-width: $screen-lg) {
       max-width: 50%;
       margin-bottom: 55px;
@@ -216,140 +276,43 @@ img {
 }
 // ./about
 
-// .services
-.services {
-
-  &__title {
-    @media (min-width: $screen-lg) {
-      max-width: 60%;
-      padding-bottom: 90px;
-    }
-  }
-
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    padding-bottom: 555px;
-    @include row;
-
-    @media (max-width: $screen-md) {
-      background-image: url(../img/mountain-sm.png);
-      background-repeat: no-repeat;
-      background-position: bottom center;
-      background-size: 100%;
-    }
-  }
-
-  &__item {
-    @include col();
-    @include col(md, 6);
-    @include col(lg, 3);
-    margin-bottom: 30px;
-    position: relative;
-
-    @media (min-width: $screen-lg) {
-      &:after {
-        content: "";
-        opacity: 0;
-        position: absolute;
-        top: calc(100% + 30px);
-        left: 50%;
-        transform: translateX(-50%);
-        width: 860px;
-        height: 555px;
-        background-image: url(../img/mountain.png);
-        background-size: 860px 555px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &.active,
-    &:hover {
-      color: $color-main;
-      cursor: pointer;
-
-      &:after {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__item-title {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.3;
-    margin-bottom: 15px;
-
-    @media (min-width: $screen-lg) {
-      font-size: 24px;
-    }
-  }
-
-  &__card-group {
-    @include row;
-  }
-
-  &__card {
-    @include col();
-    @include col(xl, 3);
-    margin-bottom: 30px;
-  }
-
-  &__card-inner {
-    display: block;
-    background-color: $color-main;
-    color: #fff;
-    height: 100%;
-    padding: 40px;
-    text-decoration: none;
-    transition: all $transition-time;
-
-    &:hover {
-      background-color: $color-yellow;
-      color: #67757F;
-    }
-  }
-
-  &__card-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 40px;
-  }
-  &__card-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-  }
-}
-// ./services
-
 // portfolio
 .portfolio {
   background-color: $color-main;
   color: #fff;
-  padding-top: 110px;
+  padding-top: 60px;
   padding-bottom: 90px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 110px;
+  }
+
+  position: relative;
+  .d-btn {
+    position: absolute;
+    right: 0;
+    top: 95px;
+
+    @media (max-width: $screen-md) {
+      position: static;
+      min-width: 100%;
+      
+      .d-btn__body {
+        right: -15px;
+        width: 100%;
+      }
+    }
+  }
 
   &__header {
     margin-bottom: 90px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    position: relative;
-
-    .d-btn {
-      position: absolute;
-      left: 82%;
-    }
   }
 
   &__title {
+    margin: 0;
     margin-right: auto;
   }
 
@@ -363,8 +326,8 @@ img {
     // @include col(sm, 6);
     // @include col(md, 4);
 
-    @include col(sm, 6, $grid-columns, 30px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
-    @include col(md, 4, $grid-columns, 30px);  // MD (768 по умолчанию) — 4 из 12, промежутки 12px
+    @include col(sm, 12, $grid-columns, 30px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
+    @include col(md, 6, $grid-columns, 30px);  // MD (768 по умолчанию) — 4 из 12, промежутки 12px
     @include col(lg, 4, $grid-columns, 20px);  // LG (992 по умолчанию) — 3 из 12, промежутки 16px
     @include col(xl, 4, $grid-columns, 20px);  // XL (1200 по умолчанию) — 2 из 12, промежутки 20px
     @include col(xxl, 4, $grid-columns, 20px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
@@ -386,6 +349,10 @@ img {
   padding-bottom: 100%;
   overflow: hidden;
   text-decoration: none;
+
+  @media (max-width: $screen-md) {
+    padding-bottom: 40%;
+  }
 
   &__img-wrap {
     position: absolute;
@@ -427,6 +394,8 @@ img {
   &__sub-title {
     font-weight: 500;
     font-size: 14px;
+    padding-top: 1em;
+    display: none;
 
     @media (min-width: $screen-lg) {
       font-size: 16px;
@@ -438,6 +407,10 @@ img {
 
     .portfolio-card__img-wrap {
       mix-blend-mode: multiply;
+    }
+
+    .portfolio-card__sub-title {
+      display: block;
     }
   }
 }
@@ -645,3 +618,53 @@ img {
   }
 }
 // end process
+
+
+#m-carousel {
+
+  .slick-slide {
+    width: 80vw;
+  }
+
+  .slick-dots {
+    list-style: none;
+    display: flex;
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer;
+
+      button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+
+        width: 11px;
+        height: 11px;
+        display: block;
+        border-radius: 10px;
+        background: #67757F;
+        transition: all .3s;
+      }
+
+      &.slick-active {
+        button {
+          height: 11px;
+          width: 30px;
+          opacity: 1;
+          background: #82C5E1;
+        }
+      }
+    }
+  }
+}

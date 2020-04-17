@@ -15,3 +15,19 @@ $( document ).ready(function() {
     //animate header end
   // end code
 });
+
+$(window).on('load resize', function() {
+  if ($(window).width() < 768) {
+    $('#m-carousel:not(.slick-initialized)').slick({
+      centerMode: false,
+      variableWidth: true,
+      dots: true,
+      infinite: false,
+      arrows: false,
+      speed: 100,
+      slidesToShow: 1
+    });
+  } else {
+    $("#m-carousel.slick-initialized").slick("unslick");
+  }
+});
