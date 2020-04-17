@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>LAZUR</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
   <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
   <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
   <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
   <link href="css/style.min.css" rel="stylesheet" media="screen">
 
   <script>
@@ -37,7 +38,7 @@
       }
     });
 
-  </script>
+  </script>
 
 </head>
 
@@ -45,7 +46,7 @@
 
   <div class="page__inner">
 
-    <div class="page__content">
+    <div class="page__content">
 
       <header class="page-header" role="banner">
         <div class="container">
@@ -56,7 +57,7 @@
                 <img class="logo-white-img" src="img/logo-white.svg" alt="LAZUR">
               </a>
               <div class="logo__caption">
-                Диджитал агентство полного цикла.
+                Диджитал агентство полного цикла. <br>
                 Веб-сайты. Реклама и продвижение. Поддержка.
               </div>
             </div>
@@ -89,8 +90,11 @@
                   </a>
                 </li>
               </ul>
-              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
             </nav>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger">
+              <!-- <span></span> -->
+              <svg width="30" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger-icon"></use></svg>
+            </button>
           </div>
         </div>
       </header>
@@ -207,7 +211,7 @@
 
     </div>
 
-    <div class="page__footer-wrapper">
+    <div class="page__footer-wrapper">
 
       <footer class="page-footer" role="contentinfo">
         <div class="container">
@@ -268,7 +272,10 @@
 
     </div>
 
-  </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
   <script src="js/script.min.js"></script>
 
 </body>

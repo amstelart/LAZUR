@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>LAZUR</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
   <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
   <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
   <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
   <link href="css/style.min.css" rel="stylesheet" media="screen">
 
   <script>
@@ -37,7 +38,7 @@
       }
     });
 
-  </script>
+  </script>
 
 </head>
 
@@ -45,7 +46,7 @@
 
   <div class="page__inner">
 
-    <div class="page__content">
+    <div class="page__content">
 
       <header class="page-header" role="banner">
         <div class="container">
@@ -56,7 +57,7 @@
                 <img class="logo-white-img" src="img/logo-white.svg" alt="LAZUR">
               </a>
               <div class="logo__caption">
-                Диджитал агентство полного цикла.
+                Диджитал агентство полного цикла. <br>
                 Веб-сайты. Реклама и продвижение. Поддержка.
               </div>
             </div>
@@ -89,8 +90,11 @@
                   </a>
                 </li>
               </ul>
-              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
             </nav>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger">
+              <!-- <span></span> -->
+              <svg width="30" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burger-icon"></use></svg>
+            </button>
           </div>
         </div>
       </header>
@@ -159,12 +163,13 @@
           </div>
         </section>
 
+        <!-- services -->
         <section class="services">
           <div class="container">
             <div class="services__header">
               <h2 class="services__title">Мы можем решать практически любые задачи в рамках digital-маркетинга</h2>
             </div>
-            <ul class="services__list">
+            <ul class="services__list" id="m-carousel">
               <li class="services__item">
                 <div class="services__item-title">Веб-разработка</div>
                 <div class="services__item-caption">Разработка сайтов, лендингов, корпоративных сайтов под ключ</div>
@@ -184,29 +189,28 @@
             </ul>
           </div>
         </section>
-
+        <!-- ./services -->
+        
         <!-- portfolio -->
         <section class="portfolio">
           <div class="container">
             <div class="portfolio__header">
               <h2 class="portfolio__title">Готовые проекты</h2>
-              <a href="#" class="d-btn d-btn--yellow d-btn--wt">
-                <div class="d-btn__inner">
-                  <div class="d-btn__outer-text">Заполнить бриф</div>
-                  <div class="d-btn__body">
-                    <span class="d-btn__icon">
-                      <span></span>
-                    </span>
-                    <span class="d-btn__caption">Заполнить бриф</span>
-                  </div>
-                </div>
-              </a>
             </div>
             <!-- portfolio list -->
             <div class="portfolio__list">
               <div class="portfolio__item">
                 <a href="#" class="portfolio-card">
-                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img.jpg" alt=""></div>
+                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img-01.jpg" alt=""></div>
+                  <div class="portfolio-card__caption">
+                    <div class="portfolio-card__title">Спектр</div>
+                    <div class="portfolio-card__sub-title">Корпоративный сайт</div>
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio__item">
+                <a href="#" class="portfolio-card">
+                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img-01.jpg" alt=""></div>
                   <div class="portfolio-card__caption">
                     <div class="portfolio-card__title">Титан-оценка</div>
                     <div class="portfolio-card__sub-title">Корпоративный сайт</div>
@@ -215,51 +219,53 @@
               </div>
               <div class="portfolio__item">
                 <a href="#" class="portfolio-card">
-                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img.jpg" alt=""></div>
+                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img-03.jpg" alt=""></div>
                   <div class="portfolio-card__caption">
-                    <div class="portfolio-card__title">Титан-оценка</div>
+                    <div class="portfolio-card__title">Felicita</div>
                     <div class="portfolio-card__sub-title">Корпоративный сайт</div>
                   </div>
                 </a>
               </div>
               <div class="portfolio__item">
                 <a href="#" class="portfolio-card">
-                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img.jpg" alt=""></div>
+                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img-04.jpg" alt=""></div>
                   <div class="portfolio-card__caption">
-                    <div class="portfolio-card__title">Титан-оценка</div>
+                    <div class="portfolio-card__title">Aquarelle</div>
                     <div class="portfolio-card__sub-title">Корпоративный сайт</div>
                   </div>
                 </a>
               </div>
               <div class="portfolio__item">
                 <a href="#" class="portfolio-card">
-                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img.jpg" alt=""></div>
+                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img-05.jpg" alt=""></div>
                   <div class="portfolio-card__caption">
-                    <div class="portfolio-card__title">Титан-оценка</div>
+                    <div class="portfolio-card__title">Швейный цех</div>
                     <div class="portfolio-card__sub-title">Корпоративный сайт</div>
                   </div>
                 </a>
               </div>
               <div class="portfolio__item">
                 <a href="#" class="portfolio-card">
-                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img.jpg" alt=""></div>
+                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img-06.jpg" alt=""></div>
                   <div class="portfolio-card__caption">
-                    <div class="portfolio-card__title">Титан-оценка</div>
-                    <div class="portfolio-card__sub-title">Корпоративный сайт</div>
-                  </div>
-                </a>
-              </div>
-              <div class="portfolio__item">
-                <a href="#" class="portfolio-card">
-                  <div class="portfolio-card__img-wrap"><img src="img/portfolio-img.jpg" alt=""></div>
-                  <div class="portfolio-card__caption">
-                    <div class="portfolio-card__title">Титан-оценка</div>
+                    <div class="portfolio-card__title">Недвижимость ЭСБИ</div>
                     <div class="portfolio-card__sub-title">Корпоративный сайт</div>
                   </div>
                 </a>
               </div>
             </div>
             <!-- ./portfolio list -->
+            <a href="#" class="d-btn d-btn--yellow d-btn--wt">
+              <div class="d-btn__inner">
+                <div class="d-btn__outer-text">Заполнить бриф</div>
+                <div class="d-btn__body">
+                  <span class="d-btn__icon">
+                    <span></span>
+                  </span>
+                  <span class="d-btn__caption">Заполнить бриф</span>
+                </div>
+              </div>
+            </a>
           </div>
         </section>
         <!-- ./portfolio -->
@@ -268,7 +274,7 @@
 
     </div>
 
-    <div class="page__footer-wrapper">
+    <div class="page__footer-wrapper">
 
       <footer class="page-footer" role="contentinfo">
         <div class="container">
@@ -329,7 +335,10 @@
 
     </div>
 
-  </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
   <script src="js/script.min.js"></script>
 
 </body>
