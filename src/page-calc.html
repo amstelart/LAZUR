@@ -19,79 +19,506 @@
       <main role="main" style="overflow: hidden;">
 
         <div class="page-calc">
-          <div class="container">
-            <div class="page-calc__inner">
-              <div class="page-calc__caption">
-                <h1 class="page-calc__title">Проектный <br>калькулятор</h1>
-                <p>Вы можете рассчитать примерный <br>бюджет интересующей услуги</p>
-              </div>
-              <div class="page-calc__form-wrap">
-                <form class="page-calc__form" action="">
-                  <h3>Оставьте заявку и мы свяжемся с вами</h3>
-                  <label class="field-text">
-                    <span class="field-text__name">Меня зовут</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__name">Моя компания</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__name">Мой вопрос</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__name">Телефон</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                    </span>
-                  </label>
-                  <div class="field-actions">
-                    <a href="#" class="d-btn d-btn--yellow d-btn--wt">
-                      <div class="d-btn__inner">
-                        <div class="d-btn__outer-text">Отправить</div>
-                        <div class="d-btn__body">
-                          <span class="d-btn__icon">
-                            <span></span>
-                          </span>
-                          <span class="d-btn__caption">Отправить</span>
-                        </div>
-                      </div>
-                    </a>
+          <div class="page-calc__head">
+            <div class="container">
+              <div class="page-calc__inner">
+                <div class="page-calc__caption">
+                  <h1 class="page-calc__title">Проектный калькулятор</h1>
+                  <p class="page-calc__text">Вы можете рассчитать примерный бюджет интересующей услуги.</p>
+                  <p class="page-calc__text">Либо заполните форму или позвоните <a href="tel:+78005553535">+7 (800) 555 3535</a> и мы сами всё за вас заполним.</p>
+                  <div class="page-calc__scroll">
+                    <a class="scroll-link" href="#calc" data-scroll-link=""></a>
                   </div>
-                </form>
+                </div>
+                <div class="page-calc__form-wrap">
+                  <form class="page-calc__form" action="" id="calc-form">
+                    <h3>Оставьте заявку и мы свяжемся с вами</h3>
+                    <label class="field-text">
+                      <span class="field-text__name">Меня зовут</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Моя компания</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Мой вопрос</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Телефон</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                  </form>
+                </div>
+                <a href="#" class="d-btn d-btn--yellow d-btn--wt">
+                  <div class="d-btn__inner">
+                    <div class="d-btn__outer-text">Отправить</div>
+                    <div class="d-btn__body">
+                      <span class="d-btn__icon">
+                        <span></span>
+                      </span>
+                      <span class="d-btn__caption">Отправить</span>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
           <div class="calc-steps-wrap">
             <div class="container">
-              <div class="calc-steps">
-                <div class="steps-item">
-                  <div class="steps-item__title">Услуги</div>
+              <div id="calc" class="calc tabs">
+                <div class="calc__panel">
+                  <div class="calc__num">01</div>
+                  <div class="calc__head">
+                    <h3 class="calc__title">Услуги</h3>
+                  </div>
+                  <ul class="calc__nav" role="tablist">
+                    <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                      <a href="#demo-tab-01" class="tabs__link" data-tab="demo-tab-01" data-toggle="tab" role="tab">Интернет магазин</a>
+                    </li>
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-02" class="tabs__link" data-tab="demo-tab-02" data-toggle="tab" role="tab">Корпоративный сайт</a>
+                    </li>
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-03" class="tabs__link" data-tab="demo-tab-03" data-toggle="tab" role="tab">Лендинг</a>
+                    </li>
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-04" class="tabs__link" data-tab="demo-tab-04" data-toggle="tab" role="tab">Продвижение</a>
+                    </li>
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-05" class="tabs__link" data-tab="demo-tab-05" data-toggle="tab" role="tab">Поддержка</a>
+                    </li>
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a href="#demo-tab-06" class="tabs__link" data-tab="demo-tab-06" data-toggle="tab" role="tab">Сложные системы</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="steps-item">
-                  <div class="steps-item__title">Выбор платформы</div>
+                <div class="calc__row">
+                  <div class="calc__col-tabs">
+                    <div class="tabs__content-wrapper">
+                      <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
+                        <div class="calc__panel">
+                          <div class="calc__num">02</div>
+                          <div class="calc__head">
+                            <h3 class="calc__title">Выбор платформы</h3>
+                            <div class="calc__description">
+                              <p>От того, что вы предпочтете, зависит функциональность проекта.</p>
+                              <p>Если в планах его дальнейшее расширение и увеличение ассортимента товаров, услуг – стоит заказать максимальную версию, как имеющую больше возможностей и настроек.</p>
+                            </div>
+                          </div>
+                          <div class="calc__body">
+                            <form class="calc__form" action="">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="10090" id="" name="demo-radio" checked>
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Простой инетрнет-магазин <br> от <span>10 000 ₽</span></h4>
+                                        <p>Подберем хорошую альтернативу 1С “Битрикс”.</p>
+                                        <span>В стоимость заложены:</span>
+                                        <ul>
+                                          <li><span>Разработка технического задания;</span></li>
+                                          <li><span>Базовое наполнение контентом;</span></li>
+                                          <li><span>Тестирование.</span></li>
+                                        </ul>
+                                        <p>Откройте свой интернет-магазин с минимальными затратами. <br> Подходит для небольшого количества товаров.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="10700" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Базовый инетрнет-магазин <br> от <span>20 000 ₽</span></h4>
+                                        <p>Редакция «Малый бизнес», включен 31 модуль.</p>
+                                        <span>В стоимость заложены:</span>
+                                        <ul>
+                                          <li><span>Разработка технического задания;</span></li>
+                                          <li><span>Базовое наполнение контентом;</span></li>
+                                          <li><span>Тестирование.</span></li>
+                                        </ul>
+                                        <p>Откройте свой интернет-магазин с минимальными затратами. <br>Разместите любое количество товаров в каталоге, управляйте скидками и доставкой. Интегрируйте магазин с «1С» и «Яндекс.Маркет».</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="10200" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Расширенный инетрнет-магазин <br> от <span>123 456 ₽</span></h4>
+                                        <p>Редакция «Бизнес», включено 49 модулей.</p>
+                                        <span>В стоимость заложены:</span>
+                                        <ul>
+                                          <li><span>Разработка технического задания;</span></li>
+                                          <li><span>Базовое наполнение контентом;</span></li>
+                                          <li><span>Тестирование.</span></li>
+                                        </ul>
+                                        <p>Больше, чем интернет-магазин. Расширяйте возможности вашего сайта: управляйте продажами товаров, услуг, электронного контента, автоматизируйте обработку заказов, интегрируйте магазин с «1С», поддерживайте партнерские сети, оценивайте затраты на рекламу, создавайте сообщества.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="calc__panel">
+                          <div class="calc__num">03</div>
+                          <div class="calc__head">
+                            <h3 class="calc__title">Выбор дизайна</h3>
+                            <div class="calc__description">
+                              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+                              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в соответствии с вашими пожеланиями? Закажите создание сайта интернет-магазина в оригинальном стиле.</p>
+                              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+                            </div>
+                          </div>
+                          <div class="calc__body">
+                            <form class="calc__form" action="">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="10200" id="" name="demo-radio" checked>
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Шаблон <br> от <span>10 000 ₽</span></h4>
+                                        <p>Вы можете выбрать стандартный шаблон.</p>
+                                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона своего сайта по дизайну.</p>
+                                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="10030" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Уникальный дизайн <br> от <span>20 000 ₽</span></h4>
+                                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт адаптивным ко всем современным устройствам, а программист настроит функциональную часть сайта.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
+                        <div class="calc__panel">
+                          <div class="calc__num">02</div>
+                          <div class="calc__head">
+                            <h3 class="calc__title">Выбор дизайна</h3>
+                            <div class="calc__description">
+                              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+                              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в соответствии с вашими пожеланиями? Закажите создание сайта интернет-магазина в оригинальном стиле.</p>
+                              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+                            </div>
+                          </div>
+                          <div class="calc__body">
+                            <form class="calc__form" action="">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input"
+                                      type="radio"
+                                      id=""
+                                      value="10000"
+                                      name="demo-radio"
+                                      checked
+                                    >
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Шаблон <br> от <span>10 000 ₽</span></h4>
+                                        <p>Вы можете выбрать стандартный шаблон.</p>
+                                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона своего сайта по дизайну.</p>
+                                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="10030" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Уникальный дизайн <br> от <span>20 000 ₽</span></h4>
+                                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт адаптивным ко всем современным устройствам, а программист настроит функциональную часть сайта.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item" id="demo-tab-03" role="tabpanel">
+                        <div class="calc__panel">
+                          <div class="calc__num">02</div>
+                          <div class="calc__head">
+                            <h3 class="calc__title">Выбор дизайна</h3>
+                            <div class="calc__description">
+                              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+                              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в соответствии с вашими пожеланиями? Закажите создание сайта интернет-магазина в оригинальном стиле.</p>
+                              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+                            </div>
+                          </div>
+                          <div class="calc__body">
+                            <form class="calc__form" action="">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="20000" id="" name="demo-radio" checked>
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Шаблон <br> от <span>10 000 ₽</span></h4>
+                                        <p>Вы можете выбрать стандартный шаблон.</p>
+                                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона своего сайта по дизайну.</p>
+                                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="22000" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Уникальный дизайн <br> от <span>20 000 ₽</span></h4>
+                                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт адаптивным ко всем современным устройствам, а программист настроит функциональную часть сайта.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item" id="demo-tab-04" role="tabpanel">
+                        <div class="calc__panel">
+                          <div class="calc__num">02</div>
+                          <div class="calc__head">
+                            <h3 class="calc__title">Выбор дизайна</h3>
+                            <div class="calc__description">
+                              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+                              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в соответствии с вашими пожеланиями? Закажите создание сайта интернет-магазина в оригинальном стиле.</p>
+                              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+                            </div>
+                          </div>
+                          <div class="calc__body">
+                            <form class="calc__form" action="">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="11000" id="" name="demo-radio" checked>
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Шаблон <br> от <span>10 000 ₽</span></h4>
+                                        <p>Вы можете выбрать стандартный шаблон.</p>
+                                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона своего сайта по дизайну.</p>
+                                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="44000" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Уникальный дизайн <br> от <span>20 000 ₽</span></h4>
+                                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт адаптивным ко всем современным устройствам, а программист настроит функциональную часть сайта.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item" id="demo-tab-05" role="tabpanel">
+                        <div class="calc__panel">
+                          <div class="calc__num">02</div>
+                          <div class="calc__head">
+                            <h3 class="calc__title">Выбор дизайна</h3>
+                            <div class="calc__description">
+                              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+                              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в соответствии с вашими пожеланиями? Закажите создание сайта интернет-магазина в оригинальном стиле.</p>
+                              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+                            </div>
+                          </div>
+                          <div class="calc__body">
+                            <form class="calc__form" action="">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" value="45000" type="radio" id="" name="demo-radio" checked>
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Шаблон <br> от <span>10 000 ₽</span></h4>
+                                        <p>Вы можете выбрать стандартный шаблон.</p>
+                                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона своего сайта по дизайну.</p>
+                                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" value="55000" type="radio" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Уникальный дизайн <br> от <span>20 000 ₽</span></h4>
+                                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт адаптивным ко всем современным устройствам, а программист настроит функциональную часть сайта.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__content-item" id="demo-tab-06" role="tabpanel">
+                        <div class="calc__panel">
+                          <div class="calc__num">02</div>
+                          <div class="calc__head">
+                            <h3 class="calc__title">Выбор дизайна</h3>
+                            <div class="calc__description">
+                              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+                              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в соответствии с вашими пожеланиями? Закажите создание сайта интернет-магазина в оригинальном стиле.</p>
+                              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+                            </div>
+                          </div>
+                          <div class="calc__body">
+                            <form class="calc__form" action="">
+                              <div class="field-radio">
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="1000" id="" name="demo-radio" checked>
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Шаблон <br> от <span>10 000 ₽</span></h4>
+                                        <p>Вы можете выбрать стандартный шаблон.</p>
+                                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона своего сайта по дизайну.</p>
+                                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="field-radio__input-wrap">
+                                  <label class="field-radio__name">
+                                    <input class="field-radio__input" type="radio" value="4000" id="" name="demo-radio">
+                                    <span class="field-radio__name-text">
+                                      <div class="calc__radio-caption">
+                                        <h4>Уникальный дизайн <br> от <span>20 000 ₽</span></h4>
+                                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт адаптивным ко всем современным устройствам, а программист настроит функциональную часть сайта.</p>
+                                      </div>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calc__col-price">
+                    <div class="calc__price">
+                      Стоимость: <br> от <span id="total-price">30 000 ₽</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="steps-item">
-                  <div class="steps-item__title">Выбор дизайна</div>
-                </div>
-                <div class="steps-item">
-                  <div class="steps-item__title">Наполнение сайта товарами</div>
-                </div>
-                <div class="steps-item">
-                  <div class="steps-item__title">Добавление отдельных функций</div>
-                </div>
-                <div class="steps-item">
-                  <div class="steps-item__title">Продвижение проекта</div>
-                </div>
+                <a class="d-btn d-btn--calc-d" href="#calc-form" data-scroll-link="">
+                  <div class="d-btn__inner">
+                    <div class="d-btn__outer-text">Работаем</div>
+                    <div class="d-btn__body">
+                      <span class="d-btn__icon">
+                        <span></span>
+                      </span>
+                      <span class="d-btn__caption">Работаем</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="d-btn d-btn--calc-m" href="#calc-form-mobile" data-scroll-link="">
+                  <div class="d-btn__inner">
+                    <div class="d-btn__outer-text">Работаем</div>
+                    <div class="d-btn__body">
+                      <span class="d-btn__icon">
+                        <span></span>
+                      </span>
+                      <span class="d-btn__caption">Работаем</span>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
+          </div>
+          <div class="page-calc__form-wrap-mobile">
+            <div class="container">
+              <form class="page-calc__form" action="" id="calc-form-mobile">
+                <h3>Оставьте заявку и мы свяжемся с вами</h3>
+                <div class="group-row">
+                  <div class="group">
+                    <label class="field-text">
+                      <span class="field-text__name">Меня зовут</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Моя компания</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                  </div>
+                  <div class="group">
+                    <label class="field-text">
+                      <span class="field-text__name">Мой вопрос</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Телефон</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <a href="#" class="d-btn d-btn--yellow d-btn--wt">
+              <div class="d-btn__inner">
+                <div class="d-btn__outer-text">Отправить</div>
+                <div class="d-btn__body">
+                  <span class="d-btn__icon">
+                    <span></span>
+                  </span>
+                  <span class="d-btn__caption">Отправить</span>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
 

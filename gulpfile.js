@@ -199,6 +199,13 @@ gulp.task('copy:fonts', function () {
     .pipe(gulp.dest(dirs.buildPath + '/fonts'));
 });
 
+// Копирование видео
+gulp.task('copy:video', function () {
+  console.log('---------- Копирование видео');
+  return gulp.src(dirs.srcPath + '/video/*.{mp4,mp3,mp2}')
+    .pipe(gulp.dest(dirs.buildPath + '/video'));
+});
+
 // Сборка SVG-спрайта для блока sprite-svg
 let spriteSvgPath = dirs.srcPath + dirs.blocksDirName + '/sprite-svg/svg/';
 gulp.task('sprite:svg', function (callback) {
@@ -327,7 +334,7 @@ gulp.task('js', function (callback) {
         }
       }))
       .pipe(concat('script.min.js'))
-      .pipe(gulpIf(!isDev, uglify()))
+      // .pipe(gulpIf(!isDev, uglify()))
       .pipe(size({
         title: 'Размер',
         showFiles: true,
@@ -370,6 +377,7 @@ gulp.task('build', function (callback) {
     ['clean'],
     ['sprite:svg', 'sprite:png'],
     ['style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'],
+    ['copy:video'],
     'html',
     callback
   );

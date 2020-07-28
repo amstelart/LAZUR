@@ -1,0 +1,58 @@
+// В этом файле должны быть стили для БЭМ-блока advantage-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.advantage-card {
+
+  $block-name:                &; // #{$block-name}__element
+  background-color: $color-main;
+  padding: 40px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: all $transition-time;
+  height: 100%;
+
+  &:hover {
+    background-color: $color-yellow;
+    color: #67757F;
+  }
+
+  &__header {
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      counter-increment: adv-counter;
+      content: "0" counter(adv-counter);
+      font-size: 60px;
+      font-weight: 700;
+      margin-right: 20px;
+    }
+
+    @media (min-width:$screen-xl) {
+      margin-bottom: 70px;
+      margin-top: 10px;
+    }
+  }
+
+  &__body {
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  &--last {
+    min-height: 340px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 215px;
+    background-color: #fff;
+    height: 100%;
+  }
+}

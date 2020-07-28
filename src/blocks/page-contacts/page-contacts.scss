@@ -6,10 +6,35 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  margin-bottom: 100px;
+  position: relative;
+
+  .d-btn {
+    position: absolute;
+    margin-bottom: 0px;
+    bottom: 0;
+    top: auto;
+    right: 0;
+    z-index: 2;
+
+    @media (max-width: ($screen-md - 1)) {
+      // position: static;
+      min-width: 100%;
+      
+      .d-btn__body {
+        right: 0;
+        bottom: inherit;
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: ($screen-xl - 1)) {
+      bottom: 80px;
+    }
+  }
 
   &__inner {
     @include row;
+
   }
 
   &__caption {
@@ -48,10 +73,25 @@
         }
       }
     }
+
+    @media (max-width: ($screen-xl - 1)) {
+      padding-bottom: 80px;
+    }
   }
 
   &__title {
     margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @media (min-width: $screen-xl) {
+      font-size: 64px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 90px;
+    }
   }
 
   &__form-wrap {
@@ -59,6 +99,9 @@
     @include col(xl, 6);
     position: relative;
     background: $color-main;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
     &:before {
       content: "";
@@ -69,21 +112,81 @@
       width: 100%;
       background: $color-main;
     }
+    &:after {
+      
+      @media (max-width:($screen-xl - 1)) {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 100%;
+        background: $color-main;
+      }
+    }
+
+    @media (max-width:($screen-xl - 1)) {
+      padding-top: 40px;
+      padding-bottom: 140px;
+    }
   }
 
   &__form {
-    position: relative;
     z-index: 1;
-    margin: 40px;
+    margin: 0;
     color: #fff;
     background: $color-main;
-    max-width: 492px;
-    padding-bottom: 120px;
+    margin-bottom: 20px;
+    width: 100%;
+    @media (min-width: $screen-xl) {
+      max-width: 492px;
+      padding-bottom: 100px;
+      margin: 40px 40px 40px 120px;
+    }
 
-    .field-actions {
-      position: absolute;
-      left: calc(100% + 35px);
-      bottom: -51px;
+    h3 {
+      margin-bottom: 30px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 45px;
+      }
+    }
+
+    .field-text {
+      margin-bottom: 20px;
+      @media (min-width: $screen-md) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .field-text__name {
+      margin-bottom: 0;
+    }
+
+    .field-text__input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      padding-left: 0;
+      color: #fff;
+
+      &:focus {
+        border-color:  #FFEE32;
+        transition: border-color $transition-time;
+      }
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    .group-row {
+      @include row;
+    }
+    .group {
+      @include col();
+      @include col(md, 6);
+      @include col(xl, 12);
     }
   }
 }

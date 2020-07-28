@@ -1,0 +1,107 @@
+// В этом файле должны быть стили для БЭМ-блока process, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.process {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background-color: $color-main;
+  color: #fff;
+  padding: 60px 0 100px;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    background-color: #fff;
+    color: inherit;
+    font-weight: 700;
+  }
+
+  &__header {
+    margin-bottom: 100px;
+
+    @media (max-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__group {
+    @include row;
+    counter-reset: process-counter;
+    padding-bottom: 120px;
+    
+    @media (min-width: $screen-xl) {
+      max-width: 75%;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 4);
+  }
+
+  &__card {
+    border: 1px solid #fff;
+    height: 100%;
+    padding: 40px;
+
+    @media (max-width: $screen-md) {
+      display: flex;
+      align-items: flex-end;
+      padding: 25px 0;
+      height: auto;
+    }
+  }
+
+  &__card-header {
+    position: relative;
+    padding-bottom: 35px;
+
+    @media (max-width: $screen-md) {
+      padding-bottom: 0;
+    }
+
+    span {
+      display: inline-block;
+
+      &:after {
+        content: "шаг";
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: #fff;
+        display: inline-block;
+        transform: translateY(-65%) translateX(-25%) rotate(-90deg);
+
+        @media (max-width: $screen-md) {
+          display: none;
+        }
+      }
+
+      &:before {
+        counter-increment: process-counter;
+        content: "0" counter(process-counter);
+        font-weight: 700;
+        font-size: 60px;
+        color: $color-yellow;
+        display: inline-block;
+        line-height: 1;
+
+        @media (max-width: $screen-md) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .d-btn {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+  }
+}

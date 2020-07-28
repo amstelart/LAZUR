@@ -1,0 +1,126 @@
+// В этом файле должны быть стили для БЭМ-блока certificates, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.certificates {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  background-color: #82C5E1;
+  color: #fff;
+  padding-top: 110px;
+  padding-bottom: 90px;
+
+  @media (max-width: ($screen-md - 1)) {
+    padding-top: 40px;
+    padding-bottom: 140px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 100px;
+
+    @media (max-width: ($screen-md - 1)) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__list {
+    @include row;
+  }
+
+  &__item {
+    @include col();
+    @include col(lg, 2);
+    @include col(sm, 2);
+    margin-bottom: 15px;
+    
+    @media (max-width: 768px) {
+      flex: 0 0 15.66%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 5px;
+
+      img {
+        max-width: 110px;
+      }
+    }
+    
+    @media (min-width: $screen-xl) {
+      margin-bottom: 25px;
+      max-width: inherit;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (min-width: 992px) {
+      .certificates__caption {
+          margin-top: 60px;
+          margin-bottom: 40px;
+          padding-top: 0;
+      }
+    }
+
+    .d-btn {
+      position: absolute;
+      right: 0;
+
+      @media (max-width: ($screen-md - 1)) {
+        bottom: 40px;
+      }
+    }
+  }
+}
+
+#certificates__list {
+  .slick-slide {
+    padding: 0px 5px;
+  }
+  .slick-dots {
+    list-style: none;
+    display: flex;
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer;
+  
+      button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+  
+        width: 11px;
+        height: 11px;
+        display: block;
+        border-radius: 10px;
+        background: #67757F;
+        transition: all .3s;
+      }
+  
+      &.slick-active {
+        button {
+          height: 11px;
+          width: 30px;
+          opacity: 1;
+          background: #fff;
+        }
+      }
+    }
+  }
+}

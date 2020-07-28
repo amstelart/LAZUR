@@ -80,6 +80,21 @@
       margin: 0;
     }
   }
+
+  &__social {
+    .social {
+      margin-bottom: 25px;
+    }
+    .pc-link {
+      color: #fff;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #FFEE32;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .footer-nav {

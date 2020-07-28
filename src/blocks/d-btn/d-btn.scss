@@ -8,6 +8,11 @@
 
   text-decoration: none;
 
+  @media (max-width: ($screen-md - 1)) {
+    left: 0;
+    right: 0;
+  }
+
   &__inner {
     display: flex;
   }
@@ -20,7 +25,7 @@
     white-space: nowrap;
     display: none;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       display: inline-flex;
     }
   }
@@ -32,9 +37,13 @@
     position: relative;
     display: inline-block;
     
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       padding: 30px 30px 30px 100px;
       width: 252px;
+    }
+    @media (max-width: ($screen-md - 1)) {
+      margin-left: 15px;
+      width: 100%;
     }
   }
 
@@ -51,7 +60,7 @@
     box-shadow: -5px 0px 0px 0px #6BA5BE, -5px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     transition: all $transition-time;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       width: 49px;
       height: 49px;
       right: inherit;
@@ -69,7 +78,7 @@
       left: 8px;
       transform: translateY(-70%) rotate(-45deg);
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-md) {
         width: 14px;
         height: 14px;
         top: 26px;
@@ -83,22 +92,44 @@
     color: #67757F;
     font-size: 14px;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       display: none;
     }
   }
 
-  &:hover {
-    #{$block-name}__icon {
+  @media (min-width: $screen-lg) {
+    &:hover {
 
-      right: 15px;
+      #{$block-name}__icon {
 
-      @media (min-width: $screen-lg) {
-        right: inherit;
-        left: 45px;
+        right: 15px;
+  
+        @media (min-width: $screen-lg) {
+          right: inherit;
+          left: 45px;
+        }
+        box-shadow: -9px 0px 0px 0px #6BA5BE, -19px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
       }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    &:active {
 
-      box-shadow: -9px 0px 0px 0px #6BA5BE, -19px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      #{$block-name}__icon {
+
+        left: 45px;
+        box-shadow: -9px 0px 0px 0px #6BA5BE, -19px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+    }
+  }
+  @media (min-width: 0px) and (max-width: 767px) {
+    &:active {
+
+      #{$block-name}__icon {
+
+        right: 15px;
+        box-shadow: -9px 0px 0px 0px #6BA5BE, -19px 0px 0px 0px #76b6d2, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
     }
   }
 
@@ -123,9 +154,18 @@
       }
     }
 
-    &:hover {
-      #{$block-name}__icon {
-        box-shadow: -9px 0px 0px 0px #FFCB0F, -19px 0px 0px 0px rgba(#FFCB0F, 0.5), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    @media (min-width: $screen-lg) {
+      &:hover {
+        #{$block-name}__icon {
+          box-shadow: -9px 0px 0px 0px #FFCB0F, -19px 0px 0px 0px rgba(#FFCB0F, 0.5), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        }
+      }
+    }
+    @media (max-width: ($screen-lg - 1)) {
+      &:active {
+        #{$block-name}__icon {
+          box-shadow: -9px 0px 0px 0px #FFCB0F, -19px 0px 0px 0px rgba(#FFCB0F, 0.5), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        }
       }
     }
   }

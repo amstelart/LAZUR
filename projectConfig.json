@@ -63,7 +63,20 @@
     "d-btn": [],
     "page-contacts": [],
     "page-calc": [],
-    "services": []
+    "services": [],
+    "preloader": [],
+    "calc-content": [],
+    "calc": [],
+    "page-top": [],
+    "certificates": [],
+    "advantage": [],
+    "process": [],
+    "portfolio-card": [],
+    "portfolio": [],
+    "intro": [],
+    "stats": [],
+    "about": [],
+    "advantage-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

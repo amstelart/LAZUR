@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока portfolio-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.portfolio-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+  text-decoration: none;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 70%;
+  }
+  @media (min-width: $screen-lg) {
+    padding-bottom: 90%;
+  }
+
+  &__img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: inherit;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    color: $text-color;
+
+    @media (min-width: $screen-lg) {
+      padding: 40px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 24px;
+    }
+  }
+
+  &__sub-title {
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 1em;
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      font-size: 16px;
+    }
+  }
+
+  &:hover {
+    background-color: #FFEE32;
+
+    .portfolio-card__img-wrap {
+      mix-blend-mode: multiply;
+    }
+
+    .portfolio-card__sub-title {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+// В этом файле должны быть стили для БЭМ-блока portfolio, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.portfolio {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background-color: $color-main;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 90px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 110px;
+  }
+
+  position: relative;
+  .d-btn {
+    position: absolute;
+    right: 0;
+
+    // @media (max-width: $screen-md) {
+    //   bottom: 30px;
+    // }
+  }
+
+  &__header {
+    margin-bottom: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  &__list {
+    // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
+    @include row($grid-gutter-width, 30px, 30px, 20px, 20px, 20px);
+  }
+
+  &__item {
+    @include col();
+    // @include col(sm, 6);
+    // @include col(md, 4);
+
+    @include col(sm, 12, $grid-columns, 30px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
+    @include col(md, 6, $grid-columns, 30px);  // MD (768 по умолчанию) — 4 из 12, промежутки 12px
+    @include col(lg, 4, $grid-columns, 20px);  // LG (992 по умолчанию) — 3 из 12, промежутки 16px
+    @include col(xl, 4, $grid-columns, 20px);  // XL (1200 по умолчанию) — 2 из 12, промежутки 20px
+    @include col(xxl, 4, $grid-columns, 20px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
+
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 20px;
+    }
+  }
+}
